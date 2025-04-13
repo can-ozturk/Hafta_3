@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kayıt Sonucu</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../Görseller/logo.jpg">
+</head>
+
+<header>
+    <nav>
+      <p>
+        <a href="../index.html">Ana Sayfa</a> |
+        <a href="araclar.html">Araçlar</a> |
+        <a href="kampanyalar.html">Kampanyalar</a> |
+        <a href="hakkımızda.html">Hakkımızda</a> 
+      </p>
+    </nav>
+    <hr>
+    <h1>📄 Kayıt Sonucu</h1>
+  </header>
+
+<body>
+    <hr>
+    <script>
+        var veriler = new URLSearchParams(window.location.search);
+        var ad = veriler.get('ad');
+        var soyad = veriler.get('soyad');
+        var dogumTarihi = veriler.get('dogumTarihi');
+        var tel = veriler.get('tel');
+        var cinsiyet = veriler.get('cinsiyet');
+        var email = veriler.get('email')
+        var adres = veriler.get('adres');
+
+        document.write("<p><strong>BAŞARILI İLE KİRALANDI</strong></p>");
+        document.write("<p><strong>Ad:</strong> " + ad + "</p>");
+        document.write("<p><strong>Soyad:</strong> " + soyad + "</p>");
+        document.write("<p><strong>Doğum Tarihi:</strong> " + dogumTarihi + "</p>");
+        document.write("<p><strong>Telefon No:</strong> " + tel + "</p>");
+        document.write("<p><strong>Cinsiyet:</strong> " + cinsiyet + "</p>");
+        document.write("<p><strong>E-posta:</strong> " + email + "</p>");
+        document.write("<p><strong>Adres:</strong> " + adres + "</p>");
+
+    </script>
+    <hr>
+</body>
+<footer>
+    <p><strong>© 2025 Öztürk Araç Kirala</strong> - Tüm hakları saklıdır</p>
+    <b>
+        <a href="gizlilik.html">Gizlilik Politikası</a> |
+        <a href="kullanim.html">Kullanım Şartları</a>
+    </b>
+    </p>
+</footer>
+</html>

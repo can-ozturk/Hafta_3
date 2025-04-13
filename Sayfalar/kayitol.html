@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kayıt Formu</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../Görseller/logo.jpg">
+</head>
+<header>
+
+    <nav>
+        <p>
+            <a href="../index.html">Ana Sayfa</a> |
+            <a href="araclar.html">Araçlar</a> |
+            <a href="kampanyalar.html">Kampanyalar</a> |
+            <a href="hakkımızda.html">Hakkımızda</a> 
+        </p>
+    </nav>
+
+    <hr>
+
+    <h1>🔐 Kayıt Ol</h1>
+</header>
+
+<body>
+    <hr>
+<script>
+var veriler = new URLSearchParams(window.location.search);
+var arac = veriler.get('arac');
+document.write("<p><strong>Kiralanan Araç:</strong> " + arac + "</p>");
+</script>
+<hr>
+    
+    <h2>Kayıt Formu</h2>
+    <form action="kirala.html" method="GET">
+        <label for="tc">T.C. Kimlik No:</label><br>
+        <input type="text" name="tc" id="tc" required>
+        <br><br>
+
+        <label for="ad">Ad:</label><br>
+        <input type="text" name="ad" id="ad" required>
+        <br><br>
+
+        <label for="soyad">Soyad:</label><br>
+        <input type="text" name="soyad" id="soyad" required>
+        <br><br>
+
+        <label for="dogumTarihi">Doğum Tarihi:</label><br>
+        <input type="date" name="dogumTarihi" id="dogumTarihi" required>
+        <br><br>
+
+        <label for="tel">Telefon No:</label><br>
+        <input type="tel" name="tel" id="tel" required>
+        <br><br>
+
+        <label for="cinsiyet">Cinsiyet:</label><br>
+        <input type="radio" name="cinsiyet" id="cinsiyet" value="Erkek" required> Erkek
+        <input type="radio" name="cinsiyet" id="cinsiyet" value="Kadın" required> Kadın
+        <br><br>
+
+        <label for="email">E-posta:</label><br>
+        <input type="email" name="email" id="email" required>
+        <br><br>
+
+        <label for="adres">Adres:</label><br>
+        <textarea name="adres" id="adres" required></textarea>
+        <br><br>
+
+        <label for="sifre">Şifre:</label><br>
+        <input type="password" name="sifre" id="sifre" required>
+        <br><br>
+
+        <button type="submit">Şimdi Kirala !</button>
+    </form>
+
+
+</body>
+<footer>
+    <p><strong>© 2025 Öztürk Araç Kirala</strong> - Tüm hakları saklıdır</p>
+    <b>
+        <a href="gizlilik.html">Gizlilik Politikası</a> |
+        <a href="kullanim.html">Kullanım Şartları</a>
+    </b>
+    </p>
+</footer>
+
+</html>
