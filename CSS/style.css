@@ -1,0 +1,457 @@
+/* Genel Ayarlar */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #f0f4f8, #b4bdc7);
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+p {
+  max-width: 800px;
+  margin: 10px auto;
+  font-size: 17px;
+  color: #000000;
+}
+
+
+
+a {
+  color: rgb(61, 61, 209);
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+}
+
+/* Başlık */
+header {
+  padding: 40px 20px;
+  background: linear-gradient(to right, #002244, #004488);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  border-bottom: 4px solid #ffcc00;
+  color: white;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.8rem;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  animation: titleFade 1s ease-in-out forwards;
+}
+header p
+{
+  color: white;
+}
+
+/* Navigasyon */
+nav p {
+  margin-top: 10px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background: #ffcc00;
+  width: 0;
+  transition: width 0.3s ease;
+  margin-top: 4px;
+}
+
+nav a:hover {
+  color: #ffcc00;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(to right, #002244, #004488);
+  color: white;
+  padding: 20px;
+  border-top: 4px solid #ffcc00;
+  text-align: center;
+}
+
+footer a {
+  color: rgb(132, 132, 208);
+}
+
+footer p
+{
+  color: white;
+}
+
+footer a:hover {
+  color: yellow;
+}
+
+/* Listeler */
+ul, .platform ul, .platform ol {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  padding-left: 25px;
+  line-height: 1.8;
+  color: #000;
+  list-style-type: "🚀 ";
+}
+
+.platform ul, .platform ol {
+  list-style-type: "✅ ";
+}
+
+/* Tablolar */
+table {
+  width: 100%;
+  max-width: 1200px;
+  margin: 30px auto;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+}
+
+table th, table td {
+  padding: 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background-color: #003366;
+  color: white;
+}
+
+/* Form */
+form {
+  background: white;
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+form h2 {
+  text-align: center;
+  color: #2f3e46;
+}
+
+label {
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #3f72af;
+  outline: none;
+}
+
+/* Radio Group */
+.radio-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.radio-group label {
+  margin-bottom: 0;
+  font-weight: normal;
+}
+
+/* Buton */
+button {
+  background: linear-gradient(to right, #5c8dc9, #215590);
+  color: white;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.4s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: linear-gradient(to left, #3f72af, #215590);
+  transform: scale(1.03);
+}
+
+button a {
+  color: #000;
+}
+
+button a:hover {
+  color: black;
+}
+
+/* Platform Alanları */
+.kampanya_platform,
+.hakkimda_platform,
+.platform {
+  background: white;
+  border-radius: 15px;
+  padding: 30px 20px;
+  margin: 40px auto;
+  max-width: 1000px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: slideFadeIn 0.1s ease forwards;
+}
+
+.platform:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+/* Araç Kartları */
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: slideFadeIn 0.8s ease forwards;
+}
+
+.arac-kart {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  background-color: #fff;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.arac-kart:hover {
+  transform: scale(1.03);
+}
+
+.arac-kart img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.arac-kart h3 {
+  color: #333;
+  font-size: 24px;
+}
+
+/* SSS ve Yardım */
+.sss-resim img
+{
+  max-width: 300px;
+      border-radius: 8px;
+      margin: 8px 0 12px 0;
+      box-shadow: 0 1px 8px rgba(43, 55, 89, 0.13);
+}
+
+.fff-konteyner,
+.yardim-konteyner {
+  max-width: 900px;
+  margin: 40px auto 20px auto;
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px 24px;
+  box-shadow: 0 4px 24px rgba(43, 55, 89, 0.12);
+}
+
+.fff-platform,
+.yardim-platform {
+  margin-bottom: 32px;
+}
+
+.fff-platform h2,
+.yardim-platform h2 {
+  color: #3558a0;
+  margin: 24px 0 12px 0;
+  font-size: 1.4rem;
+  border-left: 6px solid #3558a0;
+  padding-left: 12px;
+  background: #f1f6fd;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.yardim-platform
+{
+  margin-top:40px;
+  text-align:center;
+  margin-bottom: 32px;
+}
+
+.fff-platform li,
+.yardim-platform li {
+  margin-bottom: 18px;
+  font-size: 1.06rem;
+  line-height: 1.6;
+  background: #f8faff;
+  border-radius: 8px;
+  padding: 16px 18px;
+  border-left: 4px solid #c1d2f1;
+  box-shadow: 0 2px 6px rgba(60, 80, 120, 0.05);
+  transition: box-shadow 0.2s;
+}
+
+.fff-platform li:hover,
+.yardim-platform li:hover {
+  box-shadow: 0 4px 16px rgba(60, 80, 120, 0.13);
+}
+
+.sss-iletisim,
+.yardim-iletisim {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 1.12rem;
+  color: #2a3a5e;
+}
+
+/* Scroll Top */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  font-size: 18px;
+  padding: 10px 15px;
+  border: none;
+  background-color: #333;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  transition: background-color 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+  background-color: #555;
+}
+
+/* Araba Tahmin Oyunu */
+.araba-tahmin-oyunu {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.araba-resim img {
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+#tahmin {
+  padding: 8px;
+  font-size: 16px;
+}
+
+#sonuc,
+#odul {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+#odul {
+  color: green;
+}
+
+/* Ayraç */
+hr {
+  border: none;
+  height: 2px;
+  background-color: #ffcc00;
+  width: 80%;
+  margin: 30px auto;
+}
+
+/* Animasyonlar */
+@keyframes slideFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes titleFade {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  nav p {
+    font-size: 16px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  .platform {
+    font-size: 14px;
+  }
+
+  .fff-konteyner,
+  .yardim-konteyner {
+    padding: 14px 2vw;
+  }
+
+  .fff-platform li,
+  .yardim-platform li {
+    font-size: 0.98rem;
+  }
+
+}

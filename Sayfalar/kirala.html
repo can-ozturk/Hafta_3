@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kayıt Sonucu</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="icon" href="../Görseller/logo.jpg">
+     <script src="../JavaScript/animasyon.js" defer></script>
+     <script src="../JavaScript/kaydirma.js" defer></script>
+</head>
+
+<header>
+    <nav>
+      <p>
+     <a href="../index.html">Ana Sayfa</a> |
+        <a href="araclar.html">Araçlar</a> |
+        <a href="kampanyalar.html">Kampanyalar</a> |
+        <a href="hakkımızda.html">Hakkımızda</a> |
+        <a href="aractahmin.html">Araç Tahmin Et</a> |
+      </p>
+    </nav>
+    
+    <h1>📄 Kayıt Sonucu</h1>
+  </header>
+
+<body>
+  <section class="platform">
+    <br>
+    <script>
+        var veriler = new URLSearchParams(window.location.search);
+        var ad = veriler.get('ad');
+        var soyad = veriler.get('soyad');
+        var dogumTarihi = veriler.get('dogumTarihi');
+        var tel = veriler.get('tel');
+        var cinsiyet = veriler.get('cinsiyet');
+        var email = veriler.get('email')
+        var adres = veriler.get('adres');
+
+        document.write("<p><strong>BAŞARI İLE KİRALANDI</strong></p>");
+        document.write("<p><strong>Ad:</strong> " + ad + "</p>");
+        document.write("<p><strong>Soyad:</strong> " + soyad + "</p>");
+        document.write("<p><strong>Doğum Tarihi:</strong> " + dogumTarihi + "</p>");
+        document.write("<p><strong>Telefon No:</strong> " + tel + "</p>");
+        document.write("<p><strong>Cinsiyet:</strong> " + cinsiyet + "</p>");
+        document.write("<p><strong>E-posta:</strong> " + email + "</p>");
+        document.write("<p><strong>Adres:</strong> " + adres + "</p>");
+
+    </script>
+    <br>
+    </section>
+</body>
+<button id="scrollTopBtn" title="Yukarı Çık">↑</button>
+<footer>
+    <p><strong>© 2025 Öztürk Araç Kiralama</strong> - Tüm hakları saklıdır</p>
+    <b>
+     <a href="gizlilik.html">Gizlilik Politikası </a> |
+      <a href="kullanim.html">Kullanım Şartları </a> |
+      <a href="sss.html">SSS </a> |
+      <a href="yardim.html">Yardım</a> 
+    </b>
+    </p>
+</footer>
+</html>

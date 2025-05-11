@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kayıt Formu</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="icon" href="../Görseller/logo.jpg">
+    <script src="../JavaScript/animasyon.js" defer></script>
+    <script src="../JavaScript/kaydirma.js" defer></script>
+    <script src="../JavaScript/formkontrol.js" defer></script>
+</head>
+<header>
+
+    <nav>
+        <p>
+           <a href="../index.html">Ana Sayfa</a> |
+        <a href="araclar.html">Araçlar</a> |
+        <a href="kampanyalar.html">Kampanyalar</a> |
+        <a href="hakkımızda.html">Hakkımızda</a> |
+        <a href="aractahmin.html">Araç Tahmin Et</a> |
+        </p>
+    </nav>
+
+    <h1>🔐 Kayıt Ol</h1>
+</header>
+<section class="platform">
+<br>
+<script>
+    var veriler = new URLSearchParams(window.location.search);
+var arac = veriler.get('arac');
+document.write("<p><strong>Kiralanan Araç:</strong> " + arac + "</p>");
+</script>
+<br>
+</section>
+<body>
+    
+    <h2>Kayıt Formu</h2>
+    <form action="kirala.html" method="GET">
+
+        <div class="form-group">
+            <label for="tc">T.C. Kimlik No:</label>
+            <input type="text" name="tc" id="tc" required>
+        </div>
+    
+        <div class="form-group">
+            <label for="ad">Ad:</label>
+            <input type="text" name="ad" id="ad" required>
+        </div>
+    
+        <div class="form-group">
+            <label for="soyad">Soyad:</label>
+            <input type="text" name="soyad" id="soyad" required>
+        </div>
+    
+        <div class="form-group">
+            <label for="dogumTarihi">Doğum Tarihi:</label>
+            <input type="date" name="dogumTarihi" id="dogumTarihi" required>
+        </div>
+    
+        <div class="form-group">
+            <label for="tel">Telefon No:</label>
+            <input type="tel" name="tel" id="tel" required>
+        </div>
+    
+        <div class="form-group">
+            <label>Cinsiyet:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="cinsiyet" value="Erkek" required> Erkek</label>
+                <label><input type="radio" name="cinsiyet" value="Kadın" required> Kadın</label>
+            </div>
+        </div>
+    
+        <div class="form-group">
+            <label for="email">E-posta:</label>
+            <input type="email" name="email" id="email" required>
+        </div>
+    
+        <div class="form-group">
+            <label for="adres">Adres:</label>
+            <textarea name="adres" id="adres" required></textarea>
+        </div>
+    
+        <div class="form-group">
+            <label for="sifre">Şifre:</label>
+            <input type="password" name="sifre" id="sifre" required>
+        </div>
+    
+        <button type="submit">Şimdi Kirala!</button>
+    </form>
+
+
+</body>
+<button id="scrollTopBtn" title="Yukarı Çık">↑</button>
+<footer>
+    <p><strong>© 2025 Öztürk Araç Kiralama</strong> - Tüm hakları saklıdır</p>
+    <b>
+       <a href="gizlilik.html">Gizlilik Politikası </a> |
+      <a href="kullanim.html">Kullanım Şartları </a> |
+      <a href="sss.html">SSS </a> |
+      <a href="yardim.html">Yardım</a> 
+    </b>
+    </p>
+</footer>
+
+</html>
