@@ -9,6 +9,7 @@
     <script src="../JavaScript/animasyon.js" defer></script>
     <script src="../JavaScript/kaydirma.js" defer></script>
     <script src="../JavaScript/formkontrol.js" defer></script>
+    <script src="../JavaScript/kayit-ol.js" defer></script>
 </head>
 <header>
 
@@ -26,11 +27,7 @@
 </header>
 <section class="platform">
 <br>
-<script>
-    var veriler = new URLSearchParams(window.location.search);
-var arac = veriler.get('arac');
-document.write("<p><strong>Kiralanan Araç:</strong> " + arac + "</p>");
-</script>
+<div id="aracBilgisi"></div>
 <br>
 </section>
 <body>

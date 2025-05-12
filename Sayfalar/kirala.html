@@ -8,6 +8,7 @@
     <link rel="icon" href="../Görseller/logo.jpg">
      <script src="../JavaScript/animasyon.js" defer></script>
      <script src="../JavaScript/kaydirma.js" defer></script>
+     <script src="../JavaScript/kirala.js" defer></script>
 </head>
 
 <header>
@@ -27,26 +28,9 @@
 <body>
   <section class="platform">
     <br>
-    <script>
-        var veriler = new URLSearchParams(window.location.search);
-        var ad = veriler.get('ad');
-        var soyad = veriler.get('soyad');
-        var dogumTarihi = veriler.get('dogumTarihi');
-        var tel = veriler.get('tel');
-        var cinsiyet = veriler.get('cinsiyet');
-        var email = veriler.get('email')
-        var adres = veriler.get('adres');
-
-        document.write("<p><strong>BAŞARI İLE KİRALANDI</strong></p>");
-        document.write("<p><strong>Ad:</strong> " + ad + "</p>");
-        document.write("<p><strong>Soyad:</strong> " + soyad + "</p>");
-        document.write("<p><strong>Doğum Tarihi:</strong> " + dogumTarihi + "</p>");
-        document.write("<p><strong>Telefon No:</strong> " + tel + "</p>");
-        document.write("<p><strong>Cinsiyet:</strong> " + cinsiyet + "</p>");
-        document.write("<p><strong>E-posta:</strong> " + email + "</p>");
-        document.write("<p><strong>Adres:</strong> " + adres + "</p>");
-
-    </script>
+ 
+        <div id="kiralamaBilgisi"></div>
+   
     <br>
     </section>
 </body>
